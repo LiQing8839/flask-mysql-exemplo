@@ -1,0 +1,40 @@
+<html>
+
+<head>
+
+
+<style type="text/css">
+	table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+
+</head>
+
+<body>
+    <table class="reference">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Nascimento</th>
+            </tr>
+            {% for presidente in presidentes %}
+            <tr>
+                <td>{{presidente[0]}}</td>
+                <td>{{presidente[1]}}</td>
+                <td>{{presidente[2]}}</td>
+                <td>{{presidente[3]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/formulario">Cadastrar novo presidente</a>
+</body>
+
+</html>
